@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>School years left</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <p>How many years do you have left of school?</p>
+  <p>Click the button downbelow to answer.</p>
+
+<button onclick="askYearsLeft()">Answer</button>
+
+<p id="demo"></p>
+
+  <script>
+    function askYearsLeft() {
+      let answer = prompt("How many years do you have left in school?");
+      
+      if (isNaN(answer) || answer.trim() === "") {
+        alert("Please type a correct number");
+      }
+
+      let years = Number(answer);
+
+      if (years === 0) {
+        alert("Congratulations! You have finished school!");
+      } else if (years === 1) {
+        alert("Nearly there!");
+      } else if (years === 2) {
+        alert("Still learning!");
+      } else if (years === 3) {
+        alert("Sucks to be you :)");
+      } else if (years >= 4) {
+        alert("I hope you are kidding..");
+      }
+    }
+
+  </script>
+
+  </head>
+<body>
+
+</body>
+</html>
